@@ -1,6 +1,8 @@
 ﻿using LiveCharts;
 using LiveCharts.Wpf;
+using RespiratorGraphDemo.Common;
 using RespiratorGraphDemo.Controllers;
+using RespiratorGraphDemo.Models;
 using RespiratorGraphDemo.ViewModels;
 using RespiratorGraphDemo.Views;
 using System;
@@ -12,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Threading;
 
 namespace RespiratorGraphDemo.Main
 {
@@ -52,6 +55,13 @@ namespace RespiratorGraphDemo.Main
 
         private void SerialPortController_NewSerialPortDataRecieved(object sender, Common.SerialPortDataEventArgs e)
         {
+            if (this.InvokeRequired)
+            {
+                // Using this.Invoke causes deadlock when closing serial port, and BeginInvoke is good practice anyway.
+                this.BeginInvoke(new EventHandler<SerialPortDataEventArgs>(SerialPortController_NewSerialPortDataRecieved), new object[] { sender, e });
+                return;
+            }
+
             Console.WriteLine(e.Graph.ToString());
             this.mainViewModel.AddModel(e.Graph);
         }
@@ -60,5 +70,6 @@ namespace RespiratorGraphDemo.Main
         {
             serialPortController.Disconnect();
         }
+
     }
 }

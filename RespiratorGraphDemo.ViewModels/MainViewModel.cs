@@ -8,12 +8,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 
 namespace RespiratorGraphDemo.ViewModels
 {
     public class MainViewModel
     {
-        public IMainView mainView;
 
         public CartesianChart cartesianChart1;
         public CartesianChart cartesianChart2;
@@ -25,7 +25,6 @@ namespace RespiratorGraphDemo.ViewModels
 
         public MainViewModel(IMainView mainView)
         {
-            this.mainView = mainView;
             this.cartesianChart1 = mainView.CartesianChart1;
             this.cartesianChart2 = mainView.CartesianChart2;
             this.cartesianChart3 = mainView.CartesianChart3;
@@ -42,8 +41,8 @@ namespace RespiratorGraphDemo.ViewModels
             var lineSeries1 = new LineSeries
             {
                 Values = this.CartesianChart1ChartValues,
-                PointGeometrySize = 18,
-                StrokeThickness = 4
+                PointGeometrySize = 1,
+                StrokeThickness = 2
             };
 
             var seriesCollection1 = new SeriesCollection(mapper1);
@@ -59,6 +58,12 @@ namespace RespiratorGraphDemo.ViewModels
                     Step = TimeSpan.FromSeconds(1).Ticks
                 }
             });
+            this.cartesianChart1.AxisY.Add(new Axis
+            {
+                MaxValue = 70,
+                MinValue = -70,
+                LabelFormatter = value => value.ToString()
+            });
 
             SetAxisLimits(DateTime.Now, this.cartesianChart1);
 
@@ -70,13 +75,13 @@ namespace RespiratorGraphDemo.ViewModels
 
             var lineSeries2 = new LineSeries
             {
-                Values = this.CartesianChart1ChartValues,
-                PointGeometrySize = 18,
-                StrokeThickness = 4
+                Values = this.CartesianChart2ChartValues,
+                PointGeometrySize = 1,
+                StrokeThickness = 2
             };
 
             var seriesCollection2 = new SeriesCollection(mapper2);
-            seriesCollection1.Add(lineSeries2);
+            seriesCollection2.Add(lineSeries2);
 
             this.cartesianChart2.Series = seriesCollection2;
             this.cartesianChart2.AxisX.Add(new Axis
@@ -87,6 +92,12 @@ namespace RespiratorGraphDemo.ViewModels
                 {
                     Step = TimeSpan.FromSeconds(1).Ticks
                 }
+            });
+            this.cartesianChart2.AxisY.Add(new Axis
+            {
+                MaxValue = 70,
+                MinValue = -70,
+                LabelFormatter = value => value.ToString()
             });
 
             SetAxisLimits(DateTime.Now, this.cartesianChart2);
@@ -99,9 +110,9 @@ namespace RespiratorGraphDemo.ViewModels
 
             var lineSeries3 = new LineSeries
             {
-                Values = this.CartesianChart1ChartValues,
-                PointGeometrySize = 18,
-                StrokeThickness = 4
+                Values = this.CartesianChart3ChartValues,
+                PointGeometrySize = 1,
+                StrokeThickness = 2
             };
 
             var seriesCollection3 = new SeriesCollection(mapper3);
@@ -116,6 +127,12 @@ namespace RespiratorGraphDemo.ViewModels
                 {
                     Step = TimeSpan.FromSeconds(1).Ticks
                 }
+            });
+            this.cartesianChart3.AxisY.Add(new Axis
+            {
+                MaxValue = 70,
+                MinValue = -70,
+                LabelFormatter = value => value.ToString()
             });
 
             SetAxisLimits(DateTime.Now, this.cartesianChart3);
@@ -150,7 +167,7 @@ namespace RespiratorGraphDemo.ViewModels
         private void SetAxisLimits(DateTime now, CartesianChart cartesianChart)
         {
             cartesianChart.AxisX[0].MaxValue = now.Ticks + TimeSpan.FromSeconds(1).Ticks; // lets force the axis to be 100ms ahead
-            cartesianChart.AxisX[0].MinValue = now.Ticks - TimeSpan.FromSeconds(8).Ticks; //we only care about the last 8 seconds
+            cartesianChart.AxisX[0].MinValue = now.Ticks - TimeSpan.FromSeconds(4).Ticks; //we only care about the last 8 seconds
         }
 
     }

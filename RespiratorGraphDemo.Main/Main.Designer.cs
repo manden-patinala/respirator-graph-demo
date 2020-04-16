@@ -38,27 +38,27 @@
             // 
             // elementHost1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(12, 23);
+            this.elementHost1.Location = new System.Drawing.Point(12, 12);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(580, 120);
+            this.elementHost1.Size = new System.Drawing.Size(730, 230);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.cartesianChart1;
             // 
             // elementHost2
             // 
-            this.elementHost2.Location = new System.Drawing.Point(12, 164);
+            this.elementHost2.Location = new System.Drawing.Point(12, 248);
             this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(580, 120);
+            this.elementHost2.Size = new System.Drawing.Size(730, 230);
             this.elementHost2.TabIndex = 1;
             this.elementHost2.Text = "elementHost2";
             this.elementHost2.Child = this.cartesianChart2;
             // 
             // elementHost3
             // 
-            this.elementHost3.Location = new System.Drawing.Point(12, 306);
+            this.elementHost3.Location = new System.Drawing.Point(12, 487);
             this.elementHost3.Name = "elementHost3";
-            this.elementHost3.Size = new System.Drawing.Size(580, 120);
+            this.elementHost3.Size = new System.Drawing.Size(730, 230);
             this.elementHost3.TabIndex = 2;
             this.elementHost3.Text = "elementHost3";
             this.elementHost3.Child = this.cartesianChart3;
@@ -67,12 +67,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.elementHost3);
             this.Controls.Add(this.elementHost2);
             this.Controls.Add(this.elementHost1);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "Fan Graph Demo";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
 
