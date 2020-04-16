@@ -5,6 +5,16 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RespiratorGraphDemo.Main", "RespiratorGraphDemo.Main\RespiratorGraphDemo.Main.csproj", "{9DA9A60C-1EDE-47FE-9C6A-B5D6A868A430}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RespiratorGraphDemo.Models", "RespiratorGraphDemo.Models\RespiratorGraphDemo.Models.csproj", "{DD0A06DD-1460-4A9F-9392-78400AA3A972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RespiratorGraphDemo.Common", "RespiratorGraphDemo.Common\RespiratorGraphDemo.Common.csproj", "{DA6BFD75-6C47-4E01-90C3-591E43AFE1D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RespiratorGraphDemo.Controllers", "RespiratorGraphDemo.Controllers\RespiratorGraphDemo.Controllers.csproj", "{B62CCD88-B93B-4DC4-8736-602EBBE2FB60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RespiratorGraphDemo.Views", "RespiratorGraphDemo.Views\RespiratorGraphDemo.Views.csproj", "{184921FF-58C0-4B3F-BAC9-EF19CE4FFCEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RespiratorGraphDemo.ViewModels", "RespiratorGraphDemo.ViewModels\RespiratorGraphDemo.ViewModels.csproj", "{07D6F6CB-7A85-45C6-B057-869214006487}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{9DA9A60C-1EDE-47FE-9C6A-B5D6A868A430}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DA9A60C-1EDE-47FE-9C6A-B5D6A868A430}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DA9A60C-1EDE-47FE-9C6A-B5D6A868A430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD0A06DD-1460-4A9F-9392-78400AA3A972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0A06DD-1460-4A9F-9392-78400AA3A972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0A06DD-1460-4A9F-9392-78400AA3A972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0A06DD-1460-4A9F-9392-78400AA3A972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA6BFD75-6C47-4E01-90C3-591E43AFE1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6BFD75-6C47-4E01-90C3-591E43AFE1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6BFD75-6C47-4E01-90C3-591E43AFE1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA6BFD75-6C47-4E01-90C3-591E43AFE1D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B62CCD88-B93B-4DC4-8736-602EBBE2FB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B62CCD88-B93B-4DC4-8736-602EBBE2FB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B62CCD88-B93B-4DC4-8736-602EBBE2FB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B62CCD88-B93B-4DC4-8736-602EBBE2FB60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184921FF-58C0-4B3F-BAC9-EF19CE4FFCEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184921FF-58C0-4B3F-BAC9-EF19CE4FFCEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184921FF-58C0-4B3F-BAC9-EF19CE4FFCEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184921FF-58C0-4B3F-BAC9-EF19CE4FFCEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D6F6CB-7A85-45C6-B057-869214006487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D6F6CB-7A85-45C6-B057-869214006487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D6F6CB-7A85-45C6-B057-869214006487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D6F6CB-7A85-45C6-B057-869214006487}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
