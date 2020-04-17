@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using System.Windows.Threading;
 
 namespace RespiratorGraphDemo.ViewModels
@@ -18,6 +19,13 @@ namespace RespiratorGraphDemo.ViewModels
         public CartesianChart cartesianChart1;
         public CartesianChart cartesianChart2;
         public CartesianChart cartesianChart3;
+        public string labelParameter4;
+        public string labelParameter5;
+        public string labelParameter6;
+        public string labelParameter7;
+        public string labelParameter8;
+        public string labelParameter9;
+        public string labelParameter10;
 
         public ChartValues<Graph> CartesianChart1ChartValues { get; set; }
         public ChartValues<Graph> CartesianChart2ChartValues { get; set; }
@@ -28,6 +36,13 @@ namespace RespiratorGraphDemo.ViewModels
             this.cartesianChart1 = mainView.CartesianChart1;
             this.cartesianChart2 = mainView.CartesianChart2;
             this.cartesianChart3 = mainView.CartesianChart3;
+            this.labelParameter4 = mainView.LabelParameter4;
+            this.labelParameter5 = mainView.LabelParameter5;
+            this.labelParameter6 = mainView.LabelParameter6;
+            this.labelParameter7 = mainView.LabelParameter7;
+            this.labelParameter8 = mainView.LabelParameter8;
+            this.labelParameter9 = mainView.LabelParameter9;
+            this.labelParameter10 = mainView.LabelParameter10;
         }
 
         public void CreateCharts()
@@ -36,13 +51,15 @@ namespace RespiratorGraphDemo.ViewModels
 
             var mapper1 = Mappers.Xy<Graph>()
                 .X(model => model.DateTime.Ticks)   //use DateTime.Ticks as X
-                .Y(model => model.Flow);
+                .Y(model => model.Parameter1);
 
             var lineSeries1 = new LineSeries
             {
                 Values = this.CartesianChart1ChartValues,
                 PointGeometrySize = 1,
-                StrokeThickness = 2
+                StrokeThickness = 1,
+                Fill = new SolidColorBrush(Colors.White),
+                Stroke = new SolidColorBrush(Colors.White)
             };
 
             var seriesCollection1 = new SeriesCollection(mapper1);
@@ -58,12 +75,12 @@ namespace RespiratorGraphDemo.ViewModels
                     Step = TimeSpan.FromSeconds(1).Ticks
                 }
             });
-            this.cartesianChart1.AxisY.Add(new Axis
+            /*this.cartesianChart1.AxisY.Add(new Axis
             {
                 MaxValue = 70,
                 MinValue = -70,
                 LabelFormatter = value => value.ToString()
-            });
+            });*/
 
             SetAxisLimits(DateTime.Now, this.cartesianChart1);
 
@@ -71,13 +88,15 @@ namespace RespiratorGraphDemo.ViewModels
 
             var mapper2 = Mappers.Xy<Graph>()
                 .X(model => model.DateTime.Ticks)   //use DateTime.Ticks as X
-                .Y(model => model.Pressure);
+                .Y(model => model.Parameter2);
 
             var lineSeries2 = new LineSeries
             {
                 Values = this.CartesianChart2ChartValues,
                 PointGeometrySize = 1,
-                StrokeThickness = 2
+                StrokeThickness = 1,
+                Fill = new SolidColorBrush(Colors.White),
+                Stroke = new SolidColorBrush(Colors.White)
             };
 
             var seriesCollection2 = new SeriesCollection(mapper2);
@@ -93,12 +112,12 @@ namespace RespiratorGraphDemo.ViewModels
                     Step = TimeSpan.FromSeconds(1).Ticks
                 }
             });
-            this.cartesianChart2.AxisY.Add(new Axis
+            /*this.cartesianChart2.AxisY.Add(new Axis
             {
                 MaxValue = 70,
                 MinValue = -70,
                 LabelFormatter = value => value.ToString()
-            });
+            });*/
 
             SetAxisLimits(DateTime.Now, this.cartesianChart2);
 
@@ -106,13 +125,15 @@ namespace RespiratorGraphDemo.ViewModels
 
             var mapper3 = Mappers.Xy<Graph>()
                 .X(model => model.DateTime.Ticks)   //use DateTime.Ticks as X
-                .Y(model => model.Volume);
+                .Y(model => model.Parameter3);
 
             var lineSeries3 = new LineSeries
             {
                 Values = this.CartesianChart3ChartValues,
                 PointGeometrySize = 1,
-                StrokeThickness = 2
+                StrokeThickness = 1,
+                Fill = new SolidColorBrush(Colors.White),
+                Stroke = new SolidColorBrush(Colors.White)
             };
 
             var seriesCollection3 = new SeriesCollection(mapper3);
@@ -128,12 +149,12 @@ namespace RespiratorGraphDemo.ViewModels
                     Step = TimeSpan.FromSeconds(1).Ticks
                 }
             });
-            this.cartesianChart3.AxisY.Add(new Axis
+            /*this.cartesianChart3.AxisY.Add(new Axis
             {
                 MaxValue = 70,
                 MinValue = -70,
                 LabelFormatter = value => value.ToString()
-            });
+            });*/
 
             SetAxisLimits(DateTime.Now, this.cartesianChart3);
         }
@@ -162,6 +183,14 @@ namespace RespiratorGraphDemo.ViewModels
 
             //lets only use the last 30 values
             if (CartesianChart3ChartValues.Count > 30) CartesianChart3ChartValues.RemoveAt(0);
+
+            this.labelParameter4 = graph.Parameter4.ToString();
+            this.labelParameter5 = graph.Parameter5.ToString();
+            this.labelParameter6 = graph.Parameter6.ToString();
+            this.labelParameter7 = graph.Parameter7.ToString();
+            this.labelParameter8 = graph.Parameter8.ToString();
+            this.labelParameter9 = graph.Parameter9.ToString();
+            this.labelParameter10 = graph.Parameter10.ToString();
         }
 
         private void SetAxisLimits(DateTime now, CartesianChart cartesianChart)

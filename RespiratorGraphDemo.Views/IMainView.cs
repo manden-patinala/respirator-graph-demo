@@ -12,5 +12,12 @@ namespace RespiratorGraphDemo.Views
         CartesianChart CartesianChart1 { get; }
         CartesianChart CartesianChart2 { get; }
         CartesianChart CartesianChart3 { get; }
+        string LabelParameter4 { get; }
+        string LabelParameter5 { get; }
+        string LabelParameter6 { get; }
+        string LabelParameter7 { get; }
+        string LabelParameter8 { get; }
+        string LabelParameter9 { get; }
+        string LabelParameter10 { get; }
     }
 }
