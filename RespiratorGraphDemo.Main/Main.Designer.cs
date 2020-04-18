@@ -35,24 +35,24 @@
             this.elementHost3 = new System.Windows.Forms.Integration.ElementHost();
             this.cartesianChart3 = new LiveCharts.Wpf.CartesianChart();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelParameter4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.labelParameter5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.labelParameter6 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.labelParameter7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.labelParameter8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.labelParameter9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.labelParameter10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -100,59 +100,19 @@
             this.panel1.Size = new System.Drawing.Size(248, 95);
             this.panel1.TabIndex = 3;
             // 
-            // panel2
+            // labelParameter4
             // 
-            this.panel2.Controls.Add(this.labelParameter5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(748, 113);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(248, 95);
-            this.panel2.TabIndex = 4;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.labelParameter6);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(748, 214);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(248, 95);
-            this.panel3.TabIndex = 4;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.labelParameter7);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(748, 315);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(248, 95);
-            this.panel4.TabIndex = 4;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.labelParameter8);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Location = new System.Drawing.Point(748, 416);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(248, 95);
-            this.panel5.TabIndex = 4;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.labelParameter9);
-            this.panel6.Controls.Add(this.label12);
-            this.panel6.Location = new System.Drawing.Point(748, 517);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(248, 95);
-            this.panel6.TabIndex = 4;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.labelParameter10);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Location = new System.Drawing.Point(748, 618);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(248, 95);
-            this.panel7.TabIndex = 4;
+            this.labelParameter4.AutoSize = true;
+            this.labelParameter4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelParameter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelParameter4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelParameter4.Location = new System.Drawing.Point(179, 0);
+            this.labelParameter4.Name = "labelParameter4";
+            this.labelParameter4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelParameter4.Size = new System.Drawing.Size(69, 73);
+            this.labelParameter4.TabIndex = 1;
+            this.labelParameter4.Text = "0";
+            this.labelParameter4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -163,21 +123,16 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 40);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ppeak\r\ncm H20";
+            this.label1.Text = "P Prom\r\ncm H20";
             // 
-            // labelParameter4
+            // panel2
             // 
-            this.labelParameter4.AutoSize = true;
-            this.labelParameter4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelParameter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParameter4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelParameter4.Location = new System.Drawing.Point(142, 0);
-            this.labelParameter4.Name = "labelParameter4";
-            this.labelParameter4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelParameter4.Size = new System.Drawing.Size(106, 73);
-            this.labelParameter4.TabIndex = 1;
-            this.labelParameter4.Text = "25";
-            this.labelParameter4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.panel2.Controls.Add(this.labelParameter5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(748, 113);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(248, 95);
+            this.panel2.TabIndex = 4;
             // 
             // labelParameter5
             // 
@@ -185,12 +140,12 @@
             this.labelParameter5.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelParameter5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelParameter5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelParameter5.Location = new System.Drawing.Point(142, 0);
+            this.labelParameter5.Location = new System.Drawing.Point(179, 0);
             this.labelParameter5.Name = "labelParameter5";
             this.labelParameter5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelParameter5.Size = new System.Drawing.Size(106, 73);
+            this.labelParameter5.Size = new System.Drawing.Size(69, 73);
             this.labelParameter5.TabIndex = 3;
-            this.labelParameter5.Text = "11";
+            this.labelParameter5.Text = "0";
             this.labelParameter5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
@@ -200,9 +155,18 @@
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label4.Location = new System.Drawing.Point(3, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 40);
+            this.label4.Size = new System.Drawing.Size(88, 40);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Pmean\r\ncm H20";
+            this.label4.Text = "PEEP Real\r\ncm H20";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.labelParameter6);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Location = new System.Drawing.Point(748, 214);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(248, 95);
+            this.panel3.TabIndex = 4;
             // 
             // labelParameter6
             // 
@@ -215,7 +179,7 @@
             this.labelParameter6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelParameter6.Size = new System.Drawing.Size(69, 73);
             this.labelParameter6.TabIndex = 3;
-            this.labelParameter6.Text = "4";
+            this.labelParameter6.Text = "0";
             this.labelParameter6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -225,9 +189,18 @@
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label6.Location = new System.Drawing.Point(3, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 40);
+            this.label6.Size = new System.Drawing.Size(96, 40);
             this.label6.TabIndex = 2;
-            this.label6.Text = "PEEP\r\ncm H20";
+            this.label6.Text = "PEEP Alarm\r\ncm H20";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.labelParameter7);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Location = new System.Drawing.Point(748, 315);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(248, 95);
+            this.panel4.TabIndex = 4;
             // 
             // labelParameter7
             // 
@@ -235,12 +208,12 @@
             this.labelParameter7.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelParameter7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelParameter7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelParameter7.Location = new System.Drawing.Point(105, 0);
+            this.labelParameter7.Location = new System.Drawing.Point(179, 0);
             this.labelParameter7.Name = "labelParameter7";
             this.labelParameter7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelParameter7.Size = new System.Drawing.Size(143, 73);
+            this.labelParameter7.Size = new System.Drawing.Size(69, 73);
             this.labelParameter7.TabIndex = 3;
-            this.labelParameter7.Text = "400";
+            this.labelParameter7.Text = "0";
             this.labelParameter7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
@@ -250,9 +223,18 @@
             this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label8.Location = new System.Drawing.Point(3, 11);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 40);
+            this.label8.Size = new System.Drawing.Size(52, 40);
             this.label8.TabIndex = 2;
-            this.label8.Text = "Vte\r\nml";
+            this.label8.Text = "P Máx\r\nH2O";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.labelParameter8);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Location = new System.Drawing.Point(748, 416);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(248, 95);
+            this.panel5.TabIndex = 4;
             // 
             // labelParameter8
             // 
@@ -260,12 +242,12 @@
             this.labelParameter8.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelParameter8.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelParameter8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelParameter8.Location = new System.Drawing.Point(142, 0);
+            this.labelParameter8.Location = new System.Drawing.Point(179, 0);
             this.labelParameter8.Name = "labelParameter8";
             this.labelParameter8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelParameter8.Size = new System.Drawing.Size(106, 73);
+            this.labelParameter8.Size = new System.Drawing.Size(69, 73);
             this.labelParameter8.TabIndex = 3;
-            this.labelParameter8.Text = "20";
+            this.labelParameter8.Text = "0";
             this.labelParameter8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label10
@@ -275,9 +257,18 @@
             this.label10.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label10.Location = new System.Drawing.Point(3, 11);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 40);
+            this.label10.Size = new System.Drawing.Size(88, 40);
             this.label10.TabIndex = 2;
-            this.label10.Text = "Freq\r\nb/min";
+            this.label10.Text = "PEEP Real\r\ncm H2O";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.labelParameter9);
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Location = new System.Drawing.Point(748, 517);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(248, 95);
+            this.panel6.TabIndex = 4;
             // 
             // labelParameter9
             // 
@@ -285,12 +276,12 @@
             this.labelParameter9.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelParameter9.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelParameter9.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelParameter9.Location = new System.Drawing.Point(123, 0);
+            this.labelParameter9.Location = new System.Drawing.Point(179, 0);
             this.labelParameter9.Name = "labelParameter9";
             this.labelParameter9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelParameter9.Size = new System.Drawing.Size(125, 73);
+            this.labelParameter9.Size = new System.Drawing.Size(69, 73);
             this.labelParameter9.TabIndex = 3;
-            this.labelParameter9.Text = "1:2";
+            this.labelParameter9.Text = "0";
             this.labelParameter9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label12
@@ -304,18 +295,27 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "I:E";
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.labelParameter10);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Location = new System.Drawing.Point(748, 618);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(248, 95);
+            this.panel7.TabIndex = 4;
+            // 
             // labelParameter10
             // 
             this.labelParameter10.AutoSize = true;
             this.labelParameter10.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelParameter10.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelParameter10.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelParameter10.Location = new System.Drawing.Point(123, 0);
+            this.labelParameter10.Location = new System.Drawing.Point(179, 0);
             this.labelParameter10.Name = "labelParameter10";
             this.labelParameter10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelParameter10.Size = new System.Drawing.Size(125, 73);
+            this.labelParameter10.Size = new System.Drawing.Size(69, 73);
             this.labelParameter10.TabIndex = 3;
-            this.labelParameter10.Text = "7.8";
+            this.labelParameter10.Text = "0";
             this.labelParameter10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label14
@@ -325,9 +325,9 @@
             this.label14.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label14.Location = new System.Drawing.Point(3, 11);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 40);
+            this.label14.Size = new System.Drawing.Size(43, 20);
             this.label14.TabIndex = 2;
-            this.label14.Text = "MVe\r\nI/min";
+            this.label14.Text = "I/min";
             // 
             // Main
             // 

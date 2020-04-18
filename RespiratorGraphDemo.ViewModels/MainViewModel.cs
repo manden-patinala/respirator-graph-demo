@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Threading;
 
@@ -57,7 +58,7 @@ namespace RespiratorGraphDemo.ViewModels
             {
                 Values = this.CartesianChart1ChartValues,
                 PointGeometrySize = 1,
-                StrokeThickness = 1,
+                StrokeThickness = 2,
                 Fill = new SolidColorBrush(Colors.White),
                 Stroke = new SolidColorBrush(Colors.White)
             };
@@ -72,15 +73,18 @@ namespace RespiratorGraphDemo.ViewModels
                 LabelFormatter = value => new System.DateTime((long)value).ToString("mm:ss"),
                 Separator = new Separator
                 {
-                    Step = TimeSpan.FromSeconds(1).Ticks
+                    Step = TimeSpan.FromSeconds(1).Ticks,
+                    Stroke = new SolidColorBrush(Colors.Blue)
                 }
             });
-            /*this.cartesianChart1.AxisY.Add(new Axis
+            this.cartesianChart1.AxisY.Add(new Axis
             {
                 MaxValue = 70,
-                MinValue = -70,
+                MinValue = -10,
+                Title = "P Real cm H2O",
+                FontWeight = FontWeights.Bold,
                 LabelFormatter = value => value.ToString()
-            });*/
+            });
 
             SetAxisLimits(DateTime.Now, this.cartesianChart1);
 
@@ -109,15 +113,18 @@ namespace RespiratorGraphDemo.ViewModels
                 LabelFormatter = value => new System.DateTime((long)value).ToString("mm:ss"),
                 Separator = new Separator
                 {
-                    Step = TimeSpan.FromSeconds(1).Ticks
+                    Step = TimeSpan.FromSeconds(1).Ticks,
+                    Stroke = new SolidColorBrush(Colors.Blue)
                 }
             });
-            /*this.cartesianChart2.AxisY.Add(new Axis
+            this.cartesianChart2.AxisY.Add(new Axis
             {
-                MaxValue = 70,
-                MinValue = -70,
+                MaxValue = 2000,
+                MinValue = 0,
+                Title = "ml",
+                FontWeight = FontWeights.Bold,
                 LabelFormatter = value => value.ToString()
-            });*/
+            });
 
             SetAxisLimits(DateTime.Now, this.cartesianChart2);
 
@@ -146,15 +153,18 @@ namespace RespiratorGraphDemo.ViewModels
                 LabelFormatter = value => new System.DateTime((long)value).ToString("mm:ss"),
                 Separator = new Separator
                 {
-                    Step = TimeSpan.FromSeconds(1).Ticks
+                    Step = TimeSpan.FromSeconds(1).Ticks,
+                    Stroke = new SolidColorBrush(Colors.Blue)
                 }
             });
-            /*this.cartesianChart3.AxisY.Add(new Axis
+            this.cartesianChart3.AxisY.Add(new Axis
             {
-                MaxValue = 70,
-                MinValue = -70,
+                MaxValue = 150,
+                MinValue = 0,
+                Title = "l/min",
+                FontWeight = FontWeights.Bold,
                 LabelFormatter = value => value.ToString()
-            });*/
+            });
 
             SetAxisLimits(DateTime.Now, this.cartesianChart3);
         }
@@ -196,7 +206,7 @@ namespace RespiratorGraphDemo.ViewModels
         private void SetAxisLimits(DateTime now, CartesianChart cartesianChart)
         {
             cartesianChart.AxisX[0].MaxValue = now.Ticks + TimeSpan.FromSeconds(1).Ticks; // lets force the axis to be 100ms ahead
-            cartesianChart.AxisX[0].MinValue = now.Ticks - TimeSpan.FromSeconds(4).Ticks; //we only care about the last 8 seconds
+            cartesianChart.AxisX[0].MinValue = now.Ticks - TimeSpan.FromSeconds(8).Ticks; //we only care about the last 8 seconds
         }
 
     }

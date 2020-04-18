@@ -56,6 +56,10 @@
       <Project>{dd0a06dd-1460-4a9f-9392-78400aa3a972}</Project>
       <Name>RespiratorGraphDemo.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RespiratorGraphDemo.Views\RespiratorGraphDemo.Views.csproj">
+      <Project>{184921ff-58c0-4b3f-bac9-ef19ce4ffcea}</Project>
+      <Name>RespiratorGraphDemo.Views</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using RespiratorGraphDemo.Common;
+using RespiratorGraphDemo.Views;
 using System;
 using System.Collections.Generic;
 using System.IO.Ports;
@@ -13,7 +14,7 @@ namespace RespiratorGraphDemo.Controllers
     {
 
         private SerialPort serialPort;
-        private SerialPortSettings serialPortSettings = new SerialPortSettings();
+        public SerialPortSettings serialPortSettings = new SerialPortSettings();
         private StringBuilder stringBuilder = new StringBuilder();
         public event EventHandler<SerialPortDataEventArgs> NewSerialPortDataRecieved;
 
@@ -52,6 +53,15 @@ namespace RespiratorGraphDemo.Controllers
         public void Disconnect()
         {
             serialPort.Close();
+        }
+
+        public void SelectPortName(ISelectPortView selectPortView)
+        {
+            if (selectPortView.Show())
+            {
+                Console.WriteLine($"Serial Port Selected: {selectPortView.PortName}");
+                serialPortSettings.PortName = selectPortView.PortName;
+            }
         }
 
         private void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)

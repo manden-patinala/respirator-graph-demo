@@ -21,8 +21,8 @@ namespace RespiratorGraphDemo.Main
     public partial class Main : Form, IMainView
     {
 
-        private SerialPortController serialPortController = new SerialPortController();
-        private MainViewModel mainViewModel;
+        public SerialPortController serialPortController = new SerialPortController();
+        public MainViewModel mainViewModel;
 
         public Main()
         {
@@ -81,6 +81,9 @@ namespace RespiratorGraphDemo.Main
 
         private void Main_Load(object sender, EventArgs e)
         {
+            SelectPort selectPort = new SelectPort();
+            serialPortController.SelectPortName(selectPort);
+
             this.mainViewModel = new MainViewModel(this);
             this.mainViewModel.CreateCharts();
 
