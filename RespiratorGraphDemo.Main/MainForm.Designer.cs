@@ -329,7 +329,7 @@
             this.label14.TabIndex = 2;
             this.label14.Text = "I/min";
             // 
-            // Main
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -345,7 +345,7 @@
             this.Controls.Add(this.elementHost3);
             this.Controls.Add(this.elementHost2);
             this.Controls.Add(this.elementHost1);
-            this.Name = "Main";
+            this.Name = "MainForm";
             this.Text = "Fan Graph Demo";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);

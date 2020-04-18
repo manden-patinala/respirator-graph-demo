@@ -21,6 +21,7 @@ namespace RespiratorGraphDemo.Main
     public partial class MainForm : Form, IMainView
     {
 
+        public Responsive ResponsiveObj = new Responsive(Screen.PrimaryScreen.Bounds);
         public SerialPortController serialPortController = new SerialPortController();
         public MainViewModel mainViewModel;
 
@@ -78,7 +79,6 @@ namespace RespiratorGraphDemo.Main
             get { return labelParameter10.Text; }
         }
 
-
         private void Main_Load(object sender, EventArgs e)
         {
             SelectPortForm selectPort = new SelectPortForm();
@@ -89,6 +89,26 @@ namespace RespiratorGraphDemo.Main
 
             serialPortController.NewSerialPortDataRecieved += SerialPortController_NewSerialPortDataRecieved;
             serialPortController.Connect();
+
+            //this.MinimumSize = new Size(Screen.GetBounds(this).Width, Screen.GetBounds(this).Height);
+            //this.MaximumSize = new Size(Screen.GetBounds(this).Width, Screen.GetBounds(this).Height);
+            //ScaleControls();
+        }
+        public void ScaleControls()
+        {
+            Width = this.ResponsiveObj.GetMetrics(Width, "Width");           // Form width and height set up.
+            Height = this.ResponsiveObj.GetMetrics(Height, "Height");
+            Left = Screen.GetBounds(this).Width / 2 - Width / 2;        // Form centering.
+            Top = Screen.GetBounds(this).Height / 2 - Height / 2 - 30;  // 30 is a calibration factor.
+
+            foreach (Control Ctl in this.Controls)
+            {
+                //Ctl.Font = new Font(FontFamily.GenericSansSerif, this.ResponsiveObj.GetMetrics((int)Ctl.Font.Size), FontStyle.Regular);
+                Ctl.Width = this.ResponsiveObj.GetMetrics(Ctl.Width, "Width");
+                Ctl.Height = this.ResponsiveObj.GetMetrics(Ctl.Height, "Height");
+                Ctl.Top = this.ResponsiveObj.GetMetrics(Ctl.Top, "Top");
+                Ctl.Left = this.ResponsiveObj.GetMetrics(Ctl.Left, "Left");
+            }
         }
 
         private void SerialPortController_NewSerialPortDataRecieved(object sender, Common.SerialPortDataEventArgs e)
