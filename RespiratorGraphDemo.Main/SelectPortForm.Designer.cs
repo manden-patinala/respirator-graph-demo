@@ -1,6 +1,6 @@
 ﻿namespace RespiratorGraphDemo.Main
 {
-    partial class SelectPort
+    partial class SelectPortForm
     {
         /// <summary>
         /// Required designer variable.

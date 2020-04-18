@@ -12,9 +12,9 @@ using RespiratorGraphDemo.Views;
 
 namespace RespiratorGraphDemo.Main
 {
-    public partial class SelectPort : Form, ISelectPortView
+    public partial class SelectPortForm : Form, ISelectPortView
     {
-        public SelectPort()
+        public SelectPortForm()
         {
             InitializeComponent();
             FillComboBoxSerialPort();

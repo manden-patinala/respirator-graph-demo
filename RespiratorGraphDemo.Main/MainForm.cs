@@ -18,13 +18,13 @@ using System.Windows.Threading;
 
 namespace RespiratorGraphDemo.Main
 {
-    public partial class Main : Form, IMainView
+    public partial class MainForm : Form, IMainView
     {
 
         public SerialPortController serialPortController = new SerialPortController();
         public MainViewModel mainViewModel;
 
-        public Main()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -81,7 +81,7 @@ namespace RespiratorGraphDemo.Main
 
         private void Main_Load(object sender, EventArgs e)
         {
-            SelectPort selectPort = new SelectPort();
+            SelectPortForm selectPort = new SelectPortForm();
             serialPortController.SelectPortName(selectPort);
 
             this.mainViewModel = new MainViewModel(this);
